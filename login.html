@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🔐 สำหรับแอดมิน</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="home-card">
+
+<h1>🔐 สำหรับแอดมิน</h1>
+
+<br>
+
+<p>กรุณากรอกรหัสผ่าน</p>
+
+<br>
+
+<input
+type="password"
+id="password"
+class="input"
+placeholder="รหัสผ่าน">
+
+<br><br>
+
+<button
+class="admin-btn"
+onclick="login()">
+
+เข้าสู่ระบบ
+
+</button>
+
+<br><br>
+
+<a href="index.html">
+
+<button class="customer-btn">
+
+⬅ กลับหน้าแรก
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function login(){
+
+let password=document.getElementById("password").value;
+
+if(password=="GAY"){
+
+window.location.href="admin.html";
+
+}else{
+
+alert("❌ รหัสผ่านไม่ถูกต้อง");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
