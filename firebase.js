@@ -1,4 +1,3 @@
-// Import Firebase SDK
 const firebaseConfig = {
   apiKey: "AIzaSyCvWAznYtpjtRsXm4g9FuW4ZFr4d1MfJF4",
   authDomain: "yakisoba-order.firebaseapp.com",
@@ -9,8 +8,6 @@ const firebaseConfig = {
   measurementId: "G-3GHWHWRBRF"
 };
 
-// เริ่มใช้งาน Firebase
 firebase.initializeApp(firebaseConfig);
 
-// Firestore
 const db = firebase.firestore();
