@@ -8,16 +8,36 @@ function sendOrder() {
     if(name=="" || room=="" || amount=="" || date==""){
 
         alert("กรุณากรอกข้อมูลให้ครบ");
-
         return;
 
     }
 
-    alert("❤️ ขอบคุณค่า\n\nรับออเดอร์เรียบร้อย");
+    db.collection("orders").add({
 
-    document.getElementById("name").value="";
-    document.getElementById("room").value="";
-    document.getElementById("amount").value="";
-    document.getElementById("date").value="";
+        name: name,
+        room: room,
+        amount: Number(amount),
+        date: date,
+        done: false,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+
+    })
+
+    .then(function(){
+
+        alert("❤️ ขอบคุณค่า\n\nรับออเดอร์เรียบร้อย");
+
+        document.getElementById("name").value="";
+        document.getElementById("room").value="";
+        document.getElementById("amount").value="";
+        document.getElementById("date").value="";
+
+    })
+
+    .catch(function(error){
+
+        alert("เกิดข้อผิดพลาด\n" + error.message);
+
+    });
 
 }
